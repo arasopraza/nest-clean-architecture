@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
-import { OrderModule } from './interfaces/order/order.module';
-import { UserModule } from './interfaces/user/user.module';
+import { EnvironmentConfigModule } from './infrastructures/config/environment-config/environment-config.module';
+import { UsecaseProxyModule } from './infrastructures/usecase-proxy/usecase-proxy.module';
+import { UserModule } from './presentations/user/user.module';
 
 @Module({
-  imports: [UserModule, OrderModule],
+  imports: [UsecaseProxyModule.register(), UserModule, EnvironmentConfigModule],
 })
 export class AppModule {}
