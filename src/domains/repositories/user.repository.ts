@@ -1,5 +1,5 @@
 import { UserM } from 'src/domains/model/user';
 
-export interface UserRepositroy {
+export interface UserRepository {
   getUser(): Promise<UserM[]>;
 }
