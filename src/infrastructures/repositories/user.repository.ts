@@ -21,10 +21,11 @@ export class UserRepositoryOrm implements UserRepository {
     const user: UserM = new UserM();
 
     user.id = userEntity.id;
+    user.fullname = userEntity.fullname;
     user.username = userEntity.username;
     user.password = userEntity.password;
-    user.create_date = userEntity.create_date;
-    user.updated_date = userEntity.updated_date;
+    user.created_at = userEntity.created_at;
+    user.updated_at = userEntity.updated_at;
 
     return user;
   }

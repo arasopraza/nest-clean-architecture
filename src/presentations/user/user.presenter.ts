@@ -2,16 +2,18 @@ import { UserM } from 'src/domains/model/user';
 
 export class UserPresenter {
   id: number;
+  fullname: string;
   username: string;
   password: string;
-  create_date: Date;
-  updated_date: Date;
+  created_at: Date;
+  updated_at: Date;
 
   constructor(user: UserM) {
     this.id = user.id;
+    this.fullname = user.fullname;
     this.username = user.username;
     this.password = user.password;
-    this.create_date = user.create_date;
-    this.updated_date = user.updated_date;
+    this.created_at = user.created_at;
+    this.updated_at = user.updated_at;
   }
 }

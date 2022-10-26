@@ -1,7 +1,8 @@
 export class UserM {
   id: number;
+  fullname: string;
   username: string;
   password: string;
-  create_date: Date;
-  updated_date: Date;
+  created_at: Date;
+  updated_at: Date;
 }
